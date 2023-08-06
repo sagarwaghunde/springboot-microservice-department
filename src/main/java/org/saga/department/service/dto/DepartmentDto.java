@@ -1,9 +1,16 @@
 package org.saga.department.service.dto;
 
+import jakarta.validation.constraints.NotBlank;
+
 public class DepartmentDto {
 	private Long id;
+	@NotBlank(message = "department name should not be blank")
 	private String departmentName;
+	
+	@NotBlank(message = "department description should not be blank")
 	private String departmentDescription;
+	
+	@NotBlank(message = "department code should not be blank")
 	private String departmentCode;
 
 	public DepartmentDto() {}
